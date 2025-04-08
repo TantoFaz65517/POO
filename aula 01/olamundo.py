@@ -1,2 +1,2 @@
-
+Print("olá mundo")
 ok
