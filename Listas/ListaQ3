@@ -1,0 +1,7 @@
+print("Digite a base e a altura do retângulo")
+b =int(input())
+a =int(input())
+area = b * a
+perimetro = b + a * 2
+diagonal = pow((b**2+a**2), 0.5)
+print("Área =", area, "Perímetro =", perimetro,"diagonal =", diagonal)
