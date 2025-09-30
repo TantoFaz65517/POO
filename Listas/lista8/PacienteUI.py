@@ -1,13 +1,14 @@
 import streamlit as st
-from Paciente import Paciente
+from Paciente import paciente
 from datetime import datetime
 st.header("Dados do paciente")
 
 nome = st.text_input("nome:")
 cpf = st.text_input("CPF:")
-fone = st.text_input("Fone:")
+telefone = st.text_input("Fone:")
 nascimento = st.text_input("Nascimento")
 
 if st.button("Idade"):
     st.write(nome)
-    p = Paciente
+    p = paciente(cpf, telefone, nascimento)
+    st.write(p)
