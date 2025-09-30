@@ -9,6 +9,6 @@ telefone = st.text_input("Fone:")
 nascimento = st.text_input("Nascimento")
 
 if st.button("Idade"):
-    st.write(nome)
-    p = paciente(cpf, telefone, nascimento)
+    
+    p = paciente(nome, cpf, telefone,datetime.strptime(nascimento, "%d/%m/%Y"))
     st.write(p)

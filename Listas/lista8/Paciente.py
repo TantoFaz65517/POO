@@ -34,13 +34,12 @@ class paciente:
     def Idade(self) -> str:
         hoje = datetime.today()
         anos = hoje.year - self.__nascimento.year
-        mese = hoje.month - self.__nascimento.month
-        if idade == mese < 0:
+        meses = hoje.month - self.__nascimento.month
+        if meses < 0:
             anos-= 1
             meses += 12
         return f"{anos} anos e {meses} meses"
         
     def __str__(self) -> str:
-        return (f"Paciente: {self.__nome}, CPF: {self.__cpf}, "
-            f"Telefone: {self.__telefone} \n, Idade: {self.idade('%d/%m/%Y')}")
+        return (f"Paciente: {self.__nome}\n CPF: {self.__cpf}\n Telefone: {self.__telefone} \n Idade: {self.Idade()}")
     
