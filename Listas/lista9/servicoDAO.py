@@ -1,34 +1,22 @@
-class Servico:
-    def __init__(self, id, descricao: str, valor):
-        self.__id = id
-        self.__descricao = descricao
-        self.__valor = valor
+class ServicoDAO:
+    def __init__(self,):
+        self.__servicos = []
     
-    def get_id(self, id):
-        self.__id = id
+    def adicionar(self, Servico: Servico):
+        self.__servicos.append(servico)
 
-    def get_descricao(self, descricao: str):
-        self.__descricao = descricao
+    def listar(self)
+    return self.__servicos
 
-    def get_valor(self, valor):
-        self.__valor = valor
+    def buscar_por_codigo(self, codigo: int):
+        for s in self.__servicos:
+            s.get_codigo() == codigo:
+            return s
+        return None
 
-    def set_id(self):
-        return self.__id
-    
-    def set_descricao(self):
-        return self.__descricao
-    
-    def set_valor(self):
-        return self.__valor
-    
-    def __str__(self):
-        return f"identificação {self.__id} \n descrição {self.__descricao} \n valor {self.__valor}"
-    
-    def to_json(self):
-        dic = {"id":self.__id, "descricao":self.__descricao, "fone":self.__valor}
-        return dic
-    
-    @staticmethod
-    def from_json(dic):
-        return Servico(dic["id"], dic["descricao"], dic["valor"])
+    def remover(self, codigo: int):
+        servico = self.buscar_por_codigo(codigo)
+        if servico:
+            self.__servicos.remove(servico)
+            return True
+        return False
